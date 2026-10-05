@@ -35,8 +35,10 @@ class Chunk:
         Chunk's Z position
     data: :class:`nbt.TAG_Compound`
         Raw NBT data of the chunk
-    tile_entities: :class:`nbt.TAG_Compound`
-        ``self.data['TileEntities']`` as an attribute for easier use
+    #tile_entities: :class:`nbt.TAG_Compound`
+    #    ``self.data['TileEntities']`` as an attribute for easier use
+    tile_entities: List[:class:`nbt.TAG_Compound`]
+        List of tile entities in the chunk
     """
     __slots__ = ('nbt', 'x', 'z', 'tile_entities')
 
@@ -44,7 +46,8 @@ class Chunk:
         self.nbt = nbt_data
         self.x = nbt_data['xPos'].value
         self.z = nbt_data['zPos'].value
-        self.tile_entities = nbt_data['block_entities']
+        #self.tile_entities = nbt_data['block_entities']
+        self.tile_entities = self.data['TileEntities'].tags
         #self.sections = nbt_data['sections']
         #self.biomes = self.sections['biomes']
 
