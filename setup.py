@@ -4,13 +4,13 @@ with open('README.md', 'r') as file:
     long_description = file.read()
 
 setuptools.setup(
-    name='anvil-new',
-    version='1.0.1',
-    author='intergalactyc',
-    description='A Minecraft anvil file format parser, designed to work with minecraft versions 1.16+.',
+    name='anvil-parser-d2',
+    version='1.0.2',
+    author='SyndiShanX',
+    description='A Minecraft Anvil File Format Parser - Fixes for 1.18+ - Dungeons II Support',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/intergalactyc/anvil-new',
+    url='https://github.com/SyndiShanX/Anvil-Parser-Dungeons-II',
     packages=setuptools.find_packages(),
     classifiers=[
         'Programming Language :: Python :: 3',
